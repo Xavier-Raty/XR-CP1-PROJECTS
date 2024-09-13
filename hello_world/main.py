@@ -1,4 +1,4 @@
-# Xavier Raty, Who Are You?
+# Xavier Raty, Hello World
 
 name = input("What is your name?: ")
 
