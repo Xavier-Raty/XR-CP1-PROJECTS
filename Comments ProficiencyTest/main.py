@@ -1,4 +1,4 @@
-# Xavier Raty What's Happening? 
+# Xavier Raty What's Happening?
 
 class BankAccount:  # This is code for a class bank account
     def __init__(self, account_number, balance=0): # The account starts at 0, but you can change the number
