@@ -42,4 +42,4 @@ def play_game():
         print(f"Score: You: {user_score}, Computer: {computer_score}")
     
     print("\nThanks for playing!")
-    print(f"Final Score: You: {user_score}, Computer: {computer_score}")
+    print(f"Final Score: You: {user_score}, Computer: {computer_score}") 

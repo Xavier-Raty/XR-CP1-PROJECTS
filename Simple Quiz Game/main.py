@@ -39,4 +39,8 @@ else: print("Incorrect. The correct answer is D) Joe Biden")
       print("We'll do an easier one next:")
 
 print("This is your score:" score)
+<<<<<<< HEAD
 print("Thanks for playing!")
+=======
+print("Thanks for playing!")
+>>>>>>> 0549458ee40a5a4190e391af23d54b9c672b8552
