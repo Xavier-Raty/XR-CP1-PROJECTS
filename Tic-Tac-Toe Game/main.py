@@ -25,13 +25,49 @@ def check_winner(board):
 
 def player_move(board):
      while True:
-         try:
+            try:
                 move = int(input("Type 1-9 for your move: ")) - 1
-                row, col = divmod(move, 3)
+                row, col = (move, 3)
                 if [board][col] == " ":
                      return row, col
                 else:
-                     print("That spot is already take, so try another place.")
-                     print("You can't do that number, try another one.")
+                     print("That spot is already taken, try another place")
+            except:
+                     print("You can't do that number, try another one")
 
-def 
+def is_board_full(board):
+    for row in board:
+        if " " in row:
+            return False
+    return True
+
+def computer_move(board):
+     empty_space = [(x, y) for x in range(3) for y in range(3) if board[x][y] == " "]
+     return random.choice(empty_space)
+
+def tic_tac_toe():
+    # Initialize the board
+    board = [[" " for _ in range(3)] for _ in range(3)]
+    
+    print("Welcome to the Tic-Tac-Toe game")
+    print("You're X, Computer is O")
+    print("To select a space, choose (0, 1, or 2)")
+    print("E.x: '0 0' is the top-left corner.")
+
+    while True: 
+         print_board(board)
+         try:
+            row, col = map(int, input("Enter your move (row and column): "))
+            if board[row][col] != " ":
+                 print("This spot is already taken, try another place")
+                 continue
+         except:
+              print("You can't do that number, try another one")
+              continue
+         
+         board[row][col] = "X"
+
+         if check_winner(board) == "X":
+            print_board(board)
+            print("Yay, you win!")
+            break
