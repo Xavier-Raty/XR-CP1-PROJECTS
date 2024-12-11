@@ -11,9 +11,9 @@ def check_winner(board):
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] and board[i][0] != " ":
             return board[i][0]
-    for j in range(3):
-        if board[0][j] == board[1][j] == board[2][j] and board[0][j] != " ":
-            return board[0][i]
+        for j in range(3):
+            if board[0][j] == board[1][j] == board[2][j] and board[0][j] != " ":
+             return board[0][i]
         
 def player_move(board):
      while True:
