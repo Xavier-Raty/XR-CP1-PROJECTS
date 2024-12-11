@@ -71,3 +71,5 @@ def tic_tac_toe():
             print_board(board)
             print("Yay, you win!")
             break
+
+tic_tac_toe()
