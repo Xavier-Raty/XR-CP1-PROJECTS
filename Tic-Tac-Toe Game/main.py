@@ -11,6 +11,9 @@ def check_winner(board):
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] and board[i][0] != " ":
             return board[i][0]
+    for j in range(3):
+        if board[0][j] == board[1][j] == board[2][j] and board[0][j] != " ":
+            return board[0][i]
         
 def player_move(board):
      while True:
@@ -40,7 +43,7 @@ def tic_tac_toe():
     print("Welcome to the Tic-Tac-Toe game")
     print("You're X, Computer is O")
     print("To select a space, choose (0, 1, or 2)")
-    print("E.x: '0 0' is the top-left corner.")
+    print("E.x: '00' is the top-left corner.")
 
     while True: 
          print_board(board)
