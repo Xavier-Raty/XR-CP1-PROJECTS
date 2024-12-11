@@ -46,7 +46,6 @@ def computer_move(board):
      return random.choice(empty_space)
 
 def tic_tac_toe():
-    # Initialize the board
     board = [[" " for _ in range(3)] for _ in range(3)]
     
     print("Welcome to the Tic-Tac-Toe game")
@@ -66,6 +65,30 @@ def tic_tac_toe():
               continue
          
          board[row][col] = "X"
+        if check_winner(board) == "X":
+            print_board(board)
+            print("Yay, you won!")
+            break
+            
+        if is_board_full(board):
+            print_board(board)
+            print("It's a draw...")
+            break
+        
+        print("Computer's turn:")
+        row, col = computer_move(board)
+        board[row][col] = "O"
+        
+        if check_winner(board) == "O":
+            print_board(board)
+            print("You just got beat by a computer")
+            break
+
+        if is_board_full(board):
+            print_board(board)
+            print("It's a ties")
+            break
+
 
          if check_winner(board) == "X":
             print_board(board)
